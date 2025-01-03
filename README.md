@@ -5,11 +5,11 @@
 
 🌟 **Features**
 
-Procedurally Generated Environment: A dynamic minimap with fog-of-war and maze chunks.
-Reinforcement Learning: Powered by PPO for efficient policy optimization.
-Checkpoints: Periodic model saves to prevent losing training progress.
-Real-time Debugging: Colorful logs to track actions, rewards, and environment updates.
-Metrics Overview: Insightful training stats for detailed performance monitoring.
+Procedurally Generated Environment: A dynamic minimap with fog-of-war and maze chunks.<br />
+Reinforcement Learning: Powered by PPO for efficient policy optimization.<br />
+Checkpoints: Periodic model saves to prevent losing training progress.<br />
+Real-time Debugging: Colorful logs to track actions, rewards, and environment updates.<br />
+Metrics Overview: Insightful training stats for detailed performance monitoring.<br />
 
 
 🛠️** How It Works**
@@ -22,7 +22,7 @@ The player starts at a central position and navigates using basic actions: up, d
 🧠 - Observation:
 
 A flattened fog state representing the current visibility of the map.
-The player's normalized position in the environment.
+The player's normalized position in the environment.<br />
 The minimap simulation window will show up as black, this is to reduce graphical processing reliance and run the simuatlion headless on primarily CPU. 
 
 🎯 - Reward System:
