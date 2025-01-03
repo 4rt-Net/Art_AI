@@ -78,20 +78,31 @@ For example:
 **n_envs=1**: Single environment simulation (slower training).
 **n_envs=8**: Eight parallel environments for faster training (requires more computational resources).
 
-Note: Higher **n_envs** values significantly speed up training but demand more CPU cores and memory. Adjust based on your hardware's capabilities/limitations.
+Note:
+
+Higher **n_envs** values significantly speed up training but demand more CPU cores and memory. Adjust based on your hardware's capabilities/limitations.
+
 
 🤝 Contributions
+
 Feel free to fork, contribute, or suggest enhancements!
 
 💡 Inspiration
+
 This project is inspired by video game mechanics and serves as a learning tool for reinforcement learning enthusiasts.
 
+
 Happy exploring! 🎮
+
 
 Repository Structure:
 
 ├── checkpoints/ # Saved models during training 
+
 ├── minimap_env.py # Environment logic and reinforcement learning setup 
+
 ├── train_ai.py # Training script with debugging and checkpoints 
+
 ├── minimap_simulator/ # Visualization tools for the minimap 
+
 └── README.md # Project description and instructions
