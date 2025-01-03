@@ -1,31 +1,29 @@
 🧭 Art_AI<br /> 🚀 Art_AI is a reinforcement learning project that brings life to a 2D minimap environment! Using Proximal Policy Optimization (PPO), the AI learns to explore, clear fog-of-war, and navigate a procedurally generated maze. Whether you're a reinforcement learning enthusiast or looking for a practical project to explore dynamic AI training, this repository has got you covered!<br />
 
 🌟 Features<br />
-
 Procedurally Generated Environment: A dynamic minimap with fog-of-war and maze chunks.<br />
 Reinforcement Learning: Powered by PPO for efficient policy optimization.<br />
 Checkpoints: Periodic model saves to prevent losing training progress.<br />
 Real-time Debugging: Colorful logs to track actions, rewards, and environment updates.<br />
 Metrics Overview: Insightful training stats for detailed performance monitoring.<br />
+
 🛠️ How It Works<br />
-
 🌍 Environment:<br />
-
 A 2D minimap with fog-of-war mechanics, revealing the map as the AI explores.<br />
 The player starts at a central position and navigates using basic actions: up, down, left, and right.<br />
-🧠 Observation:<br />
 
+🧠 Observation:<br />
 A flattened fog state representing the current visibility of the map.<br />
 The player's normalized position in the environment.<br />
-🎯 Reward System:<br />
 
+🎯 Reward System:<br />
 Positive rewards: For clearing fog and revealing new areas.<br />
 Negative rewards: For redundant or ineffective movements.<br />
+
 ⚙️ Training Algorithm:<br />
-
 PPO balances exploration and exploitation to optimize AI performance.<br />
-💾 Checkpoints:<br />
 
+💾 Checkpoints:<br />
 Models are periodically saved in the /checkpoints directory.<br />
 Continue training from the latest checkpoint seamlessly.<br />
 
