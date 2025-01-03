@@ -27,6 +27,7 @@ PPO balances exploration and exploitation to optimize AI performance.<br />
 Models are periodically saved in the /checkpoints directory.<br />
 Continue training from the latest checkpoint seamlessly.<br />
 
+📊 Metrics Explained<br />
 ![image](https://github.com/user-attachments/assets/997545f7-a987-46b4-a670-fec58a9e5208)
 
 <br />
