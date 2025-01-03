@@ -23,6 +23,7 @@ The player starts at a central position and navigates using basic actions: up, d
 
 A flattened fog state representing the current visibility of the map.
 The player's normalized position in the environment.
+The minimap simulation window will show up as black, this is to reduce graphical processing reliance and run the simuatlion headless on primarily CPU. 
 
 🎯 - Reward System:
 
