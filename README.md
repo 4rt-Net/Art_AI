@@ -1,86 +1,88 @@
-🧭 Art_AI<br /> 🚀 Art_AI is a reinforcement learning project that brings life to a 2D minimap environment! Using Proximal Policy Optimization (PPO), the AI learns to explore, clear fog-of-war, and navigate a procedurally generated maze. Whether you're a reinforcement learning enthusiast or looking for a practical project to explore dynamic AI training, this repository has got you covered!<br />
+🧭 **Art_AI**
+🚀 Art_AI is a reinforcement learning project that brings life to a 2D minimap environment! Using Proximal Policy Optimization (PPO), the AI learns to explore, clear fog-of-war, and navigate a procedurally generated maze. Whether you're a reinforcement learning enthusiast or looking for a practical project to explore dynamic AI training, this repository has got you covered!
 
-🌟 Features<br />
-Procedurally Generated Environment: A dynamic minimap with fog-of-war and maze chunks.<br />
-Reinforcement Learning: Powered by PPO for efficient policy optimization.<br />
-Checkpoints: Periodic model saves to prevent losing training progress.<br />
-Real-time Debugging: Colorful logs to track actions, rewards, and environment updates.<br />
-Metrics Overview: Insightful training stats for detailed performance monitoring.<br />
+🌟 **Features**
+Procedurally Generated Environment: A dynamic minimap with fog-of-war and maze chunks.
+Reinforcement Learning: Powered by PPO for efficient policy optimization.
+Checkpoints: Periodic model saves to prevent losing training progress.
+Real-time Debugging: Colorful logs to track actions, rewards, and environment updates.
+Metrics Overview: Insightful training stats for detailed performance monitoring.
 
-🛠️ How It Works<br />
-🌍 Environment:<br />
-A 2D minimap with fog-of-war mechanics, revealing the map as the AI explores.<br />
-The player starts at a central position and navigates using basic actions: up, down, left, and right.<br />
+🛠️** How It Works**
+🌍 - Environment:
+A 2D minimap with fog-of-war mechanics, revealing the map as the AI explores.
+The player starts at a central position and navigates using basic actions: up, down, left, and right.
 
-🧠 Observation:<br />
-A flattened fog state representing the current visibility of the map.<br />
-The player's normalized position in the environment.<br />
+🧠 - Observation:
+A flattened fog state representing the current visibility of the map.
+The player's normalized position in the environment.
 
-🎯 Reward System:<br />
-Positive rewards: For clearing fog and revealing new areas.<br />
-Negative rewards: For redundant or ineffective movements.<br />
+🎯 - Reward System:
+Positive rewards: For clearing fog and revealing new areas.
+Negative rewards: For redundant or ineffective movements.
 
-⚙️ Training Algorithm:<br />
-PPO balances exploration and exploitation to optimize AI performance.<br />
+⚙️ - Training Algorithm:
+PPO balances exploration and exploitation to optimize AI performance.
 
-💾 Checkpoints:<br />
-Models are periodically saved in the /checkpoints directory.<br />
-Continue training from the latest checkpoint seamlessly.<br />
+💾 - Checkpoints:
+Models are periodically saved in the /checkpoints directory.
+Continue training from the latest checkpoint seamlessly.
 
-📊 Metrics Explained<br />
-![image](https://github.com/user-attachments/assets/997545f7-a987-46b4-a670-fec58a9e5208)
+📊 - Metrics Explained
+image
 
-<br />
-🚀 Getting Started<br />
-1. Install Dependencies<br />
-Ensure you have Python 3.10+ and install the required libraries:<br />
 
-pip install stable-baselines3 gymnasium colorama numpy<br />
+🚀 **Getting Started**
+- 1. Install Dependencies
+Ensure you have Python 3.10+ and install the required libraries:
 
-2. Train the AI<br />
-Start the training process:<br />
+`pip install stable-baselines3 gymnasium colorama numpy`
 
-python train_ai.py<br />
+- Train the AI
+Start the training process:
+`python train_ai.py`
 
-4. Monitor Training<br />
-Logs display actions, rewards, and fog-clearing updates in real time.<br />
-Checkpoints are saved in the /checkpoints directory.<br />
+- Monitor Training
+Logs display actions, rewards, and fog-clearing updates in real time.
+Checkpoints are saved in the **/checkpoints** directory.
 
-6. Resume Training<br />
-To continue from the last checkpoint:<br />
+- Resume Training
+To continue from the last checkpoint:
 
-Place the checkpoint model in the project directory.<br />
-Modify train_ai.py to load the model:<br />
+Place the checkpoint model in the project directory, and modify train_ai.py to load the model:
 
-model = PPO.load("checkpoints/model_checkpoint_x.zip", env=env)<br />
+`model = PPO.load("checkpoints/model_checkpoint_x.zip", env=env)`
 
-5. Analyze Results<br />
-Metrics in the console give insights into the AI’s performance and convergence.<br />
-Use saved models for further testing or evaluation.<br />
-<br />
-6. Concurrent Simulations<br />
-To increase or decrease the number of concurrent simulations (parallel environments):<br />
+- Analyze Results
+Metrics in the console give insights into the AI’s performance and convergence.
+Use saved models for further testing or evaluation.
 
-Locate the following line in train_ai.py:<br />
+- 6. Concurrent Simulations
+To increase or decrease the number of concurrent simulations (parallel environments):
+Locate the following line in train_ai.py:
 
-env = make_vec_env(lambda: MinimapEnv(), n_envs=3)<br />
-Adjust the n_envs parameter to set the number of parallel environments. For example:<br />
-n_envs=1: Single environment simulation (slower training).<br />
-n_envs=8: Eight parallel environments for faster training (requires more computational resources).<br />
-Note: Higher n_envs values significantly speed up training but demand more CPU cores and memory. Adjust based on your hardware's capabilities.<br />
+`env = make_vec_env(lambda: MinimapEnv(), n_envs=3)`
 
-🤝 Contributions<br />
-Feel free to fork, contribute, or suggest enhancements!<br />
+Adjust the **n_envs** parameter to set the number of parallel environments. 
+For example:
 
-💡 Inspiration<br />
-This project is inspired by video game mechanics and serves as a learning tool for reinforcement learning enthusiasts.<br />
+**n_envs=1**: Single environment simulation (slower training).
+**n_envs=8**: Eight parallel environments for faster training (requires more computational resources).
+
+Note: Higher **n_envs** values significantly speed up training but demand more CPU cores and memory. Adjust based on your hardware's capabilities/limitations.
+
+🤝 Contributions
+Feel free to fork, contribute, or suggest enhancements!
+
+💡 Inspiration
+This project is inspired by video game mechanics and serves as a learning tool for reinforcement learning enthusiasts.
 
 Happy exploring! 🎮
 
-Repository Structure:<br />
-<br />
-├── checkpoints/       # Saved models during training
-├── minimap_env.py     # Environment logic and reinforcement learning setup
-├── train_ai.py        # Training script with debugging and checkpoints
-├── minimap_simulator/ # Visualization tools for the minimap
-└── README.md          # Project description and instructions
+Repository Structure:
+
+├── checkpoints/ # Saved models during training 
+├── minimap_env.py # Environment logic and reinforcement learning setup 
+├── train_ai.py # Training script with debugging and checkpoints 
+├── minimap_simulator/ # Visualization tools for the minimap 
+└── README.md # Project description and instructions
